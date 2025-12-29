@@ -40,8 +40,8 @@ wget https://developer.download.nvidia.com/compute/cuda/11.8.0/local_installers/
 sudo sh cuda_11.8.0_520.61.05_linux.run
 
 # 配置环境变量
-echo 'export PATH=/usr/local/cuda-11.8/bin:\$PATH' >> ~/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:\$LD_LIBRARY_PATH' >> ~/.bashrc
+echo 'export PATH=/usr/local/cuda-11.8/bin:$PATH' >> ~/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-11.8/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc
 source ~/.bashrc
 
 # 验证
@@ -56,7 +56,7 @@ tar -xzvf TensorRT-8.6.1.6.Linux.x86_64-gnu.cuda-11.8.tar.gz
 cd TensorRT-8.6.1.6
 
 # 配置环境变量
-export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:$(pwd)/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/lib
 
 # 安装 Python wheel
 cd python
